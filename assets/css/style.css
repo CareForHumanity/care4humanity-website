@@ -1097,13 +1097,11 @@ h5 {
 .features h3 {
   font-weight: bold;
   font-size: 17px;
-  font-family: 'Noto Serif TC', serif;
   
   
 }
 
 .features .feature_paragraph{
-  font-family: 'Noto Serif TC', serif;
   font-size: 15px;
   text-align:justify;
 }
@@ -1111,7 +1109,6 @@ h5 {
 .features .source-link{
   font-size: 14px;
   margin-bottom: 15px;
-  font-family: 'Noto Serif TC', serif;
 }
 
 .features .source-link a:hover{
@@ -3879,3 +3876,6 @@ body.modal-open #header { z-index: 1000 !important; }
 .note-hp { position: absolute !important; left: -9999px; width: 1px; height: 1px; }
 @media (max-width: 575px) { .notes-wall { padding: 50px 0; } }
 @media (prefers-reduced-motion: reduce) { .note:hover { transform: none; } .note-new { animation: none; } }
+
+/* Home hero: show more of the team (photo moved up a little) */
+#hero::after { background-position: center 18%; }
