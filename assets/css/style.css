@@ -3878,4 +3878,15 @@ body.modal-open #header { z-index: 1000 !important; }
 @media (prefers-reduced-motion: reduce) { .note:hover { transform: none; } .note-new { animation: none; } }
 
 /* Home hero: show more of the team (photo moved up a little) */
-#hero::after { background-position: center 18%; }
+#hero::after { background-position: center 35%; }
+
+/* Home hero on tablets, laptops and desktops: scale the team photo so the whole group fits
+   the screen. The curved box is 130% of the screen wide, so 100% / 1.3 = the screen width.
+   Narrower screens fit the photo to the box height instead, so it always fills the curve.
+   Phones (768px and below) keep the original crop on the middle of the group. */
+@media (min-width: 769px) {
+  #hero::after { background-size: 100% 100%, auto 100%; }
+}
+@media (min-width: 769px) and (min-aspect-ratio: 152/100) {
+  #hero::after { background-size: 100% 100%, calc(100% / 1.3) auto; }
+}
